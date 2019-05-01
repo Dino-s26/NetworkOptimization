@@ -36,7 +36,7 @@ Below are the Structure of the Project Folder that I use for this project, as I 
        - `__init__.py` file
        - `command_gather_data_dummy.py` file
 
-1. ## Install Required module
+## Install Required module
 This section will help you to install the required module, I hope that you already have python installed, so proceed with below commands to install the required modules :
 
 1. Windows on Powershell / Command Prompt :
@@ -65,7 +65,7 @@ sudo python -m pip install pathlib2
 ```
 If you find problem when installing required module, google and forums (stackoverflow, reddit, etc) are your best friend to find the answers to the related error code when installing required module.
 
-2.  ## Change Template File
+## Change Template File
 As the file only template, kindly change the template file to your need.
 There are 4 file (`data_collection_template`, `host_data_dummy`, `command_gather_data_dummy` and `credential`), below are the coding that you need to change :
 
