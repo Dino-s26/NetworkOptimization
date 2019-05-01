@@ -18,7 +18,7 @@ you should already have understanding about Python coding (mostly using Python 3
 1. [Install required module (Paramiko, pyinstaller, pathlib2).](#install-required-module)
 2. [Change the template file ('host_', 'credentials_', 'commands_').](#change-template-file)
 3. [Change `__init__.py` in each of folder ('host_', 'credentials_', 'commands)') with the related file you will be use in the core coding.](#change-init-file)
-4. (Windows Use Only) Compile the code into '**.exe**' file if you will use it for task scheduler on windows or 
+4. [(Windows Use Only) Compile the code into '**.exe**' file if you will use it for task scheduler on windows or schedule job on windows](#compile-to-executable)
 
 ## Structure of project
 
