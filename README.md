@@ -10,7 +10,7 @@ you should already have understanding about Python coding (mostly using Python 3
 1. Python 3.6.x / 2.7.x.
 2. Paramiko module.
 3. Basic Understading about Paramiko & Python coding. *you just need to understand how the coding work.*
-4. **__[Optional]__** Microsoft Visual C++ 2015 for running the exe program once you compile it. *if not then no need to use.*
+4. **__[Optional]__** Microsoft Visual C++ 2015 for running the `.exe` program once you compile it. *if not then no need to use.*
 
 
 ## Table of Content :
@@ -36,7 +36,7 @@ Below are the Structure of the Project Folder that I use for this project, as I 
        - `__init__.py` file
        - `command_gather_data_dummy.py` file
 
-## Install Required module
+1. ### Install Required module
 This section will help you to install the required module, I hope that you already have python installed, so proceed with below commands to install the required modules :
 
 1. Windows on Powershell / Command Prompt :
@@ -65,11 +65,11 @@ sudo python -m pip install pathlib2
 ```
 If you find problem when installing required module, google and forums (stackoverflow, reddit, etc) are your best friend to find the answers to the related error code when installing required module.
 
-## Change Template File
+2. ### Change Template File
 As the file only template, kindly change the template file to your need.
 There are 4 file (`data_collection_template`, `host_data_dummy`, `command_gather_data_dummy` and `credential`), below are the coding that you need to change :
 
-1. data_collection_template.
+1. **data_collection_template.**
 
 Open the `data_collection_template` file, and you will find the following lines :
 ```
@@ -80,3 +80,33 @@ Change the `host_data_dummy` to your host file that you copy from template in `h
 from .host_data_dummy import *
 ```
 Change the `.host_data_dummy` with your host file that you already copy and rename it. You should update this file whenever you create new `host` file for your other template you creating for gathering data.
+
+*Next line is :*
+
+```
+#Define file name
+	
+#uncomment this line to define custom hostname 
+#hostname = 'your-device-hostname'
+
+#comment this 4 line, if you intent to custom the hostname above
+#start here
+conn.send('show run | i hostname \n')
+time.sleep(3)
+hostname = conn.recv(65000)
+hostname = hostname.decode('utf-8').split('\r\n')[-2].split('#')[0]
+#end here
+```
+Above line are the file name for the output, as the hostname could be get by run the `'show run | i hotname'`, this only available for Cisco devices. For other devices you should define the custome hostname, or using list method just like the ip we use to ssh but nested in the ssh method. Since I'm using Cisco devices for the test, You could change this with your prefer command that your device could handle.
+
+*Next Line is :*
+
+```
+output_file = open(os.path.join('path/to/your/save/log/output',log_name), 'ab+')
+```
+Change the `'path/to/your/save/log/output'` to your folder to save the output file after running the command.
+
+
+2. **host_data_dummy.**
+
+Open the `host_data_dummy` file, and you will fin the following lines :
