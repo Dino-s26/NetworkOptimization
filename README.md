@@ -109,7 +109,7 @@ Change the `'path/to/your/save/log/output'` to your folder to save the output fi
 
 2. **host_data_dummy.**
 
-Open the `host_data_dummy` file, and you will fin the following lines :
+Open the `host_data_dummy` file, and you will find the following lines :
 ```
 list_ip = [
            '127.0.0.1' #Change this ip to your server / network device ip, add ',' / comma for multiple ip 
