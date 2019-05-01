@@ -9,8 +9,8 @@ you should already have understanding about Python coding (mostly using Python 3
 ## Requirement :
 1. Python 3.6.x / 2.7.x.
 2. Paramiko module.
-3. Basic Understading about Paramiko & Python coding, *you just need to understand how the coding work :).
-4. [Optional] Microsoft Visual C++ 2015 for running the exe program once you compile it, if not then no need to use :).
+3. Basic Understading about Paramiko & Python coding. *you just need to understand how the coding work.*
+4. **__[Optional]__** Microsoft Visual C++ 2015 for running the exe program once you compile it. *if not then no need to use.*
 
 
 ## Table of Content :
